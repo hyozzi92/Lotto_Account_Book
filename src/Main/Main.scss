@@ -7,4 +7,115 @@
   margin: 100px auto;
   width: 80%;
   height: 100vh;
+  justify-content: space-between;
+}
+
+.leftSide {
+  @include flex-center;
+  border: 1px solid black;
+  width: 30%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  .summaryContainer {
+    border: 1px solid black;
+    width: 100%;
+    height: 35%;
+    .contentWrap {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+      .summaryHeader {
+        display: flex;
+        align-items: center;
+      }
+      .section {
+        margin-top: 30px;
+      }
+      .imgWrap {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .chatContainer {
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+  }
+}
+
+.rightSide {
+  @include flex-center;
+  border: 1px solid black;
+  width: 65%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  .qrContainer {
+    border: 1px solid black;
+    width: 100%;
+    height: 35%;
+
+    .qrWrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      border: 1px solid black;
+
+      .headerWrap {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 20px;
+        .lottoWord {
+          font-size: 30px;
+          width: 70%;
+
+          padding-bottom: 10px;
+          border-bottom: 1px solid gray;
+        }
+        .result {
+          margin-top: 20px;
+          font-size: 30px;
+        }
+        .resultDate {
+          margin-top: 10px;
+        }
+      }
+      .moneyInfoWrap {
+        margin-top: 30px;
+        .winMoneyAmount {
+          margin-left: 10px;
+          font-weight: 700;
+          font-size: 20px;
+        }
+      }
+      & div {
+        @include flex-center;
+      }
+      .lottoNumWrap {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        .lottoNum {
+          @include flex-center;
+          width: 50px;
+          height: 50px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .mapContainer {
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+  }
 }
