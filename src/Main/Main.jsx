@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Main.scss';
 import Carousel from './Carousel';
+import LandingPage from './LandingPage';
 
 const Main = () => {
   const navigate = useNavigate();
@@ -83,7 +84,9 @@ const Main = () => {
               </div>
             </div>
           </div>
-          <div className="mapContainer"></div>
+          <div className="mapContainer">
+            <LandingPage />
+          </div>
         </div>
       </div>
     </div>
