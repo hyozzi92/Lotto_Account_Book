@@ -31,7 +31,7 @@ const Carousel = () => {
     <div>
       <StyledSlider {...settings} className="mainCarousel">
         <div className="bannerImg">
-          <BannerImg src="images/제리메인캐러셀.jpg" />
+          <BannerImg />
         </div>
         <div>
           <h3>2</h3>

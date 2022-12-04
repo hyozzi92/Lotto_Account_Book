@@ -1,0 +1,9 @@
+@import '/src/styles/variables.scss';
+
+.mapWrap {
+  display: flex;
+  .resultList {
+    height: 500px;
+    overflow: scroll;
+  }
+}
