@@ -1,0 +1,121 @@
+@import '/src/styles/variables.scss';
+
+.mainBoxDesk {
+  @include flex-center;
+  border: 1px solid black;
+  margin-top: 100px;
+  margin: 100px auto;
+  width: 80%;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.leftSideDesk {
+  @include flex-center;
+  border: 1px solid black;
+  width: 30%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  .summaryContainerDesk {
+    border: 1px solid black;
+    width: 100%;
+    height: 35%;
+    .contentWrapDesk {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+      .summaryHeaderDesk {
+        display: flex;
+        align-items: center;
+      }
+      .sectionDesk {
+        margin-top: 30px;
+      }
+      .imgWrapDesk {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .chatContainerDesk {
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+  }
+}
+
+.rightSideDesk {
+  @include flex-center;
+  border: 1px solid black;
+  width: 65%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  .qrContainerDesk {
+    border: 1px solid black;
+    width: 100%;
+    height: 35%;
+
+    .qrWrapDesk {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      border: 1px solid black;
+
+      .headerWrapDesk {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 20px;
+        .lottoWordDesk {
+          font-size: 30px;
+          width: 70%;
+
+          padding-bottom: 10px;
+          border-bottom: 1px solid gray;
+        }
+        .resultDesk {
+          margin-top: 20px;
+          font-size: 30px;
+        }
+        .resultDateDesk {
+          margin-top: 10px;
+        }
+      }
+      .moneyInfoWrapDesk {
+        margin-top: 30px;
+        .winMoneyAmount Desk {
+          margin-left: 10px;
+          font-weight: 700;
+          font-size: 20px;
+        }
+      }
+      & div {
+        @include flex-center;
+      }
+      .lottoNumWrapDesk {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        .lottoNumDesk {
+          @include flex-center;
+          width: 50px;
+          height: 50px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .mapContainerDesk {
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+  }
+}
