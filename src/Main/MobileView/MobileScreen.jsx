@@ -1,7 +1,7 @@
 import { height } from '@mui/system';
 import React from 'react';
-import Carousel from './Carousel';
-import LandingPage from './LandingPage';
+import Carousel from '../Carousel/CarouselDesktop';
+import LandingPage from '../Map/LandingPage';
 import './MobileScreen.scss';
 
 const MobileScreen = () => {

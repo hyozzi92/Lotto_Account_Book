@@ -5,17 +5,20 @@ import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import LottoSummary from '../LottoSummary/LottoSummary';
+import './CarouselDesktop.scss';
 const Carousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    speed: 1000,
+    slidesToShow: 5,
     slidesToScroll: 1,
     arrows: true,
     pauseOnHover: true,
     autoplay: true, //자동시작 (boolean) -default:false
-    autoplaySpeed: 2000,
+    autoplaySpeed: 0,
+    pauseOnFocus: false,
     nextArrow: (
       <NextArrow>
         <ArrowForwardIosIcon />
@@ -27,47 +30,35 @@ const Carousel = () => {
       </PrevArrow>
     ),
   };
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <div>
-      <StyledSlider {...settings} className="mainCarousel">
-        <div className="bannerImg">
-          <BannerImg />
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </StyledSlider>
-    </div>
+    <StyledSlider {...settings} className="mainCarousel">
+      {arr.map((e, i) => {
+        return (
+          <div className="sliderWrap" key={i} id={e}>
+            <LottoSummary />
+          </div>
+        );
+      })}
+    </StyledSlider>
   );
 };
 
 export default Carousel;
 
 const StyledSlider = styled(Slider)`
+  margin-top: 20px;
+  height: 400px;
   position: relative;
   .slick-list {
     width: 100vw;
     margin: 0 auto;
     background-color: grey;
-    height: 300px;
-    text-align: center;
+    z-index: 1;
   }
   .slick-slide div {
     width: 100%;
-    height: 500px;
-    background-color: skyblue;
+    background-color: white;
   }
   .slick-arrow.slick-arrow {
     z-index: 10;
@@ -141,9 +132,4 @@ const NextArrow = styled.div`
     background-color: white;
     opacity: 0.5;
   }
-`;
-const BannerImg = styled.img`
-  width: 100vw;
-  height: 500px;
-  object-fit: fill;
 `;
