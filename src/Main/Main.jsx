@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { useMediaQuery } from 'react-responsive';
-import DesktopScreen from './DesktopScreen';
-import MobileScreen from './MobileScreen';
+import DesktopScreen from '../Main/DeskTopView/DesktopScreen';
+import MobileScreen from '../Main/MobileView/MobileScreen';
 
 const Main = () => {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
