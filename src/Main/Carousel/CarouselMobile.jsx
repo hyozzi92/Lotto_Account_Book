@@ -11,7 +11,7 @@ const CarouselMobile = () => {
   const settingsMobile = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
