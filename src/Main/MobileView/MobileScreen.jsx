@@ -1,15 +1,23 @@
-import { height } from '@mui/system';
-import React from 'react';
-import Carousel from '../Carousel/CarouselDesktop';
+import React, { useState } from 'react';
+import CarouselMobile from '../Carousel/CarouselMobile';
 import LandingPage from '../Map/LandingPage';
 import './MobileScreen.scss';
+import { useNavigate } from 'react-router-dom';
 
 const MobileScreen = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const navigate = useNavigate();
+
+  const isOpenModal = () => {
+    setOpenModal(true);
+    navigate('/QR');
+  };
   return (
     <div>
       <div>
         <div className="slider">
-          <Carousel />
+          <CarouselMobile />
         </div>
         <div className="mainBox">
           <div className="summaryContainer" style={{ marginTop: '30px' }}>
@@ -55,9 +63,7 @@ const MobileScreen = () => {
           <div className="rightSide">
             <div className="qrContainer" style={{ marginTop: '50px' }}>
               <div className="qrWrap">
-                <button style={{ marginTop: '50px', height: '50px' }}>
-                  QR코드 인증하기
-                </button>
+                <button onClick={isOpenModal}>qr확인</button>
                 <div className="headerWrap">
                   <p className="lottoWord">로또</p>
                   <span className="result">1043회 당첨결과</span>
