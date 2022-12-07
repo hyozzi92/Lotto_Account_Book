@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from '../Carousel/CarouselDesktop';
 import LandingPage from '../Map/LandingPage';
 import LottoSummary from '../LottoSummary/LottoSummary';
 import './DesktopScreen.scss';
+import { useNavigate } from 'react-router-dom';
+import QrScanner from '../QrScan/QrScanner';
 
 const DesktopScreen = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const navigate = useNavigate();
+
+  const isOpenModal = () => {
+    setOpenModal(true);
+    navigate('/QR');
+  };
   return (
     <div>
       <div>
@@ -19,9 +29,7 @@ const DesktopScreen = () => {
           <div className="rightSideDesk">
             <div className="qrContainerDesk">
               <div className="qrWrapDesk">
-                <button style={{ marginTop: '10px', fontSize: '50px' }}>
-                  QR코드 인증하기
-                </button>
+                <button onClick={isOpenModal}>qr확인</button>
                 <div className="headerWrapDesk">
                   <p className="lottoWordDesk">로또</p>
                   <span className="resultDesk">1043회 당첨결과</span>
