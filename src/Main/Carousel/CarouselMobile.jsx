@@ -7,12 +7,12 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import LottoSummary from '../LottoSummary/LottoSummary';
 import './CarouselDesktop.scss';
-const CarouselDesktop = () => {
-  const settings = {
+const CarouselMobile = () => {
+  const settingsMobile = {
     dots: true,
     infinite: true,
-    speed: 1000,
-    slidesToShow: 5,
+    speed: 2000,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     pauseOnHover: true,
@@ -30,23 +30,23 @@ const CarouselDesktop = () => {
       </PrevArrow>
     ),
   };
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <StyledSlider {...settings} className="mainCarousel">
-      {arr.map((e, i) => {
+    <StyledSliderMobile {...settingsMobile} className="mainCarousel">
+      {arr2.map((e, i) => {
         return (
           <div className="sliderWrap" key={i} id={e}>
             <LottoSummary />
           </div>
         );
       })}
-    </StyledSlider>
+    </StyledSliderMobile>
   );
 };
 
-export default CarouselDesktop;
+export default CarouselMobile;
 
-const StyledSlider = styled(Slider)`
+const StyledSliderMobile = styled(Slider)`
   margin-top: 20px;
   height: 400px;
   position: relative;

@@ -5,6 +5,7 @@ import LottoSummary from '../LottoSummary/LottoSummary';
 import './DesktopScreen.scss';
 import { useNavigate } from 'react-router-dom';
 import QrScanner from '../QrScan/QrScanner';
+import CarouselDesktop from '../Carousel/CarouselDesktop';
 
 const DesktopScreen = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -19,7 +20,7 @@ const DesktopScreen = () => {
     <div>
       <div>
         <div className="slider">
-          <Carousel />
+          <CarouselDesktop />
         </div>
         <div className="mainBoxDesk">
           <div className="leftSideDesk">
